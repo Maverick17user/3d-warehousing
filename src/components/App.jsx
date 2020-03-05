@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
-import ViewDataList from './common/viewDataList/ViewDataList';
 
 // *Впихнуто всё в App просто как пример
 // *Создай локальный компонент Index.jsx в папке "view1"
@@ -68,9 +67,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <ViewDataList title='Area 01' dataType='cargo' viewData={{}}/>
-      </div>
+      <div></div>
     );
   }
 }

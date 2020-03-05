@@ -1,2 +1,3 @@
 @import './common/common.css';
-@import './viewDataList/viewDataList.css'
+@import './viewDataList/viewDataList.css';
+@import './numbering/numbering.css';
