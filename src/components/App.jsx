@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
+import ViewDataList from './common/viewDataList/ViewDataList';
 
 // *Впихнуто всё в App просто как пример
 // *Создай локальный компонент Index.jsx в папке "view1"
@@ -8,7 +9,7 @@ class App extends Component {
   // Warehouse creator
   createWarehouse = () => {
     const warehouseGeometry = new THREE.BoxGeometry( 1, 1, 1 );
-    const warehouseMaterial= new THREE.MeshBasicMaterial( { color: 'white', transparent: true, wireframe: true, opacity: 0.1 } );
+    const warehouseMaterial= new THREE.MeshBasicMaterial( { color: 'white', transparent: true, wireframe: true, opacity: 0.2 } );
     const warehouse = new THREE.Mesh( warehouseGeometry, warehouseMaterial );
 
     return warehouse;
@@ -67,7 +68,9 @@ class App extends Component {
 
   render() {
     return (
-      <div></div>
+      <div>
+        <ViewDataList title='Area 01' dataType='cargo' viewData={{}}/>
+      </div>
     );
   }
 }
