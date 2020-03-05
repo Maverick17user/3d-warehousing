@@ -1,0 +1,13 @@
+div.numbering_layer1 {
+  border-radius: 50%;
+  position: absolute;
+  border: 3px solid whitesmoke;
+  background: black;
+  padding: 7px;
+}
+
+div.numbering_layer1 span {
+  font-size: 16px;
+  font-family: NeogreyMedium;
+}
+/*# sourceMappingURL=numbering.css.map */

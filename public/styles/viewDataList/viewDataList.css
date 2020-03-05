@@ -1,0 +1,47 @@
+section.viewDataSection {
+  background-color: #131217;
+  width: 18vw;
+  height: 50vh;
+  position: absolute;
+  top: 25vh;
+  bottom: 25vh;
+  right: 5vw;
+  padding: 10px 25px;
+  border: 2px solid whitesmoke;
+}
+
+section.viewDataSection div.viewDataSection__title_wrapper {
+  color: lightblue;
+}
+
+section.viewDataSection div.viewDataSection__title_wrapper p {
+  font-size: 24px;
+  margin: 20px 0;
+  font-family: NeogreyMedium;
+}
+
+section.viewDataSection div.viewDataSection__title_wrapper hr {
+  margin-bottom: 20px;
+}
+
+section.viewDataSection section.viewDataSection__content_wrapper label {
+  color: lightblue;
+  font-family: NeogreyMedium;
+}
+
+section.viewDataSection div.viewDataSection__button_wrapper {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 10px;
+}
+
+section.viewDataSection div.viewDataSection__button_wrapper button {
+  font-family: NeogreyMedium;
+  background-color: black;
+  border: 2px solid lightblue;
+  padding: 3px 15px;
+  color: lightblue;
+  cursor: pointer;
+}
+/*# sourceMappingURL=viewDataList.css.map */
