@@ -5,7 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 class Area extends Component {
   // Area creator
   createAreaMesh = (x, y, z) => {
-    const areaGeometry = new THREE.BoxGeometry( 2, 1.5, 0.20 );
+    const areaGeometry = new THREE.BoxGeometry( 3, 2, 0.20 );
     const areamaterial= new THREE.MeshBasicMaterial( { color: 'lightgray', transparent: true, opacity: 0.3 } );
     const area = new THREE.Mesh( areaGeometry, areamaterial );
 
@@ -16,7 +16,7 @@ class Area extends Component {
 
   // Warehouse creator
   createWarehouse = () => {
-    const warehouseGeometry = new THREE.BoxBufferGeometry( 2, 1.5, 1.5 );
+    const warehouseGeometry = new THREE.BoxBufferGeometry( 3, 2, 1.5 );
     const edges = new THREE.EdgesGeometry( warehouseGeometry );
     const warehouseMaterial= new THREE.LineBasicMaterial( { color: 'white', transparent: true, opacity: 0.3 } );
     const warehouse = new THREE.LineSegments( edges, warehouseMaterial );
@@ -37,15 +37,27 @@ class Area extends Component {
   //   return plane;
   // }
 
-  createBox = (x, y, z) => {
-    const areaGeometry = new THREE.BoxGeometry( 2, 0.3, 0.07 );
-    const areamaterial= new THREE.MeshBasicMaterial( { color: 'white', transparent: true, opacity: 0.5, } );
-    const area = new THREE.Mesh( areaGeometry, areamaterial );
+  createShelves = (x, y, z, rotation) => {
+    const shelvesGeometry = new THREE.BoxGeometry( 3, 0.3, 0.07 );
+    const shelvesMaterial= new THREE.MeshBasicMaterial( { color: 'white', transparent: true, opacity: 0.5, } );
+    const shelves = new THREE.Mesh( shelvesGeometry, shelvesMaterial );
 
-    area.rotation.x = 1.56;
-    area.position.set(x, y, z);
+    shelves.rotation.x = rotation;
+    shelves.position.set(x, y, z);
 
-    return area;
+    return shelves;
+  }
+
+  createShelfEdges = (x, y, z, rotation) => {
+    const shelfEdgeGeometry = new THREE.BoxGeometry( 2, 0.5, 0.1 );
+    const shelfEdgeMaterial= new THREE.MeshBasicMaterial( { color: 'lightgray', transparent: true, opacity: 0.2, } );
+    const shelfEdge = new THREE.Mesh( shelfEdgeGeometry, shelfEdgeMaterial );
+
+    shelfEdge.rotation.x = rotation;
+    shelfEdge.rotation.y = rotation;
+    shelfEdge.position.set(x, y, z);
+
+    return shelfEdge;
   }
 
   componentDidMount() {
@@ -57,19 +69,25 @@ class Area extends Component {
     camera.position.set(0, 0, 7);
 
     // Create warehouse mesh
-    const warehouse = this.createWarehouse();
+    // const warehouse = this.createWarehouse();
 
     // Create area meshes
     const areaMesh = this.createAreaMesh(0, 0, 0.85);
 
     // Create plane for shelf
-    const plane = this.createBox(0, 0, 1.1);
-    const plane2 = this.createBox(0, -0.712, 1.1);
-    const plane3 = this.createBox(0, 0.712, 1.1);
+    const shelf = this.createShelves(0, 0.97, 1.1, 1.57);
+    const shelf2 = this.createShelves(0, 0.4, 1.1, 1.57);
+    const shelf3 = this.createShelves(0, -0.3, 1.1, 1.57);
+    const shelf4 = this.createShelves(0, -0.97, 1.1, 1.57);
 
+    // Create shelf edges
+    const rightShelfEdge = this.createShelfEdges(1.55, 0, 1, 1.57);
+    const leftShelfEdge = this.createShelfEdges(-1.55, 0, 1, 1.57);
 
     // Add meshes to the scene
-    scene.add(warehouse, areaMesh, plane, plane2, plane3);
+    scene.add(areaMesh);
+    scene.add(shelf, shelf2, shelf3, shelf4);
+    scene.add(rightShelfEdge, leftShelfEdge);
 
     const controls = new OrbitControls(camera, renderer.domElement);
 
