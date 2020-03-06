@@ -3,6 +3,8 @@ import * as THREE from 'three';
 import { objectRotation } from '../services/camera';
 
 
+import Area from './view-2/Area';
+
 // *Впихнуто всё в App просто как пример
 // *Создай локальный компонент Index.jsx в папке "view1"
 class App extends Component {
@@ -80,7 +82,9 @@ class App extends Component {
 
   render() {    
     return (
-      <div></div>
+      <div>
+        <Area />
+      </div>
     );
   }
 }
