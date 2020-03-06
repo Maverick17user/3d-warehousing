@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
+import { objectRotation } from '../services/camera';
+
+
+import Area from './view-2/Area';
 
 // *Впихнуто всё в App просто как пример
 // *Создай локальный компонент Index.jsx в папке "view1"
 class App extends Component {
-
   // Warehouse creator
   createWarehouse = () => {
     const warehouseGeometry = new THREE.BoxGeometry( 1, 1, 1 );
-    const warehouseMaterial= new THREE.MeshBasicMaterial( { color: 'white', transparent: true, wireframe: true, opacity: 0.1 } );
+    const warehouseMaterial= new THREE.MeshBasicMaterial( { color: 'white', transparent: true, wireframe: true, opacity: 0.2 } );
     const warehouse = new THREE.Mesh( warehouseGeometry, warehouseMaterial );
 
     return warehouse;
@@ -38,18 +41,21 @@ class App extends Component {
     // *и как это экспортить и переиспользовать в разных view
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera( 35, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
     camera.position.z = 5;
     
     // Create warehouse mesh
-    const warehouse = this.createWarehouse();
+    const warehouse = this.createWarehouse(); 
 
     // Create area meshes
     const area1 = this.createAreaMesh(-0.35, -0.2);
     const area2 = this.createAreaMesh(-0.35, 0.15);
-    const area3 = this.createAreaMesh(0.38, -0.40);
+    const area3 = this.createAreaMesh(0.38, -0.40); 
+ 
+  
     
     // Add meshes to the scene
     scene.add( warehouse );
@@ -62,12 +68,23 @@ class App extends Component {
     this.setRotationXY(area2, 0.45, 1.1);
     this.setRotationXY(area3, 0.45, 1.1);
 
-    renderer.render( scene, camera );
+
+    const rotateWarehouse = objectRotation(camera, renderer.domElement);
+
+    function animate() {
+      requestAnimationFrame( animate );
+      rotateWarehouse.update();
+      renderer.render(scene, camera);
+    }
+    animate();  
+
   }
 
-  render() {
+  render() {    
     return (
-      <div></div>
+      <div>
+        <Area />
+      </div>
     );
   }
 }
