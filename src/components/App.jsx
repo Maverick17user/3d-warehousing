@@ -9,7 +9,7 @@ class App extends Component {
   // Warehouse creator
   createWarehouse = () => {
     const warehouseGeometry = new THREE.BoxGeometry( 1, 1, 1 );
-    const warehouseMaterial= new THREE.MeshBasicMaterial( { color: 'white', transparent: true, wireframe: true, opacity: 0.1 } );
+    const warehouseMaterial= new THREE.MeshBasicMaterial( { color: 'white', transparent: true, wireframe: true, opacity: 0.2 } );
     const warehouse = new THREE.Mesh( warehouseGeometry, warehouseMaterial );
 
     return warehouse;
