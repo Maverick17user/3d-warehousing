@@ -4,6 +4,7 @@ import { objectRotation } from '../services/camera';
 
 
 import Area from './view-2/Area';
+// import Box from './box/Box';
 
 // *Впихнуто всё в App просто как пример
 // *Создай локальный компонент Index.jsx в папке "view1"
@@ -84,6 +85,7 @@ class App extends Component {
     return (
       <div>
         <Area />
+        {/* <Box x={1} y={1} z={1} segments={7} /> */}
       </div>
     );
   }
