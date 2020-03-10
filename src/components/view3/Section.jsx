@@ -8,8 +8,8 @@ class Section extends Component {
           Section Component
         </span>
       </div>
-    )
+    );
   }
 }
 
-export default Section
+export default Section;
