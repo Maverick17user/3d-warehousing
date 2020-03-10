@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
-import { objectRotation } from '../services/camera';
+import { objectRotation } from '../../services/camera';
 
 // *Впихнуто всё в App просто как пример
 // *Создай локальный компонент Index.jsx в папке "view1"
@@ -42,7 +42,7 @@ class Warehouse extends Component {
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
-    camera.position.z = 5;
+    camera.position.set(-2, 1, -3);
     
     // Create warehouse mesh
     const warehouse = this.createWarehouse(); 

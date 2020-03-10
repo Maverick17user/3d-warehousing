@@ -6,8 +6,8 @@ class Area extends Component {
   // Area creator
   createAreaMesh = (x, y, z) => {
     const areaGeometry = new THREE.BoxGeometry( 3, 2, 0.20 );
-    const areamaterial= new THREE.MeshBasicMaterial( { color: 'lightgray', transparent: true, opacity: 0.3 } );
-    const area = new THREE.Mesh( areaGeometry, areamaterial );
+    const areaMaterial= new THREE.MeshBasicMaterial( { color: 'lightgray', transparent: true, opacity: 0.3 } );
+    const area = new THREE.Mesh( areaGeometry, areaMaterial );
 
     area.position.set(x, y, z);
 
