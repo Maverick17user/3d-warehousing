@@ -4265,6 +4265,11 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
+first-person-controls@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/first-person-controls/-/first-person-controls-1.0.1.tgz#7271023cea4a00d49cf522ae2fc74a8314329cca"
+  integrity sha512-1ys8+7pd+xPPJVe8NqNIZ/TRsVQT+gytJgHb8S/CZFr8oobJNjV2bktyddxwq9JIh9JxbzZEei8XnjSdzWCZvg==
+
 flat-cache@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-2.0.1.tgz#5d296d6f04bda44a4630a301413bdbc2ec085ec0"
@@ -9574,6 +9579,11 @@ text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+three@^0.137.0:
+  version "0.137.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.137.0.tgz#0ebd6ba66637a332c31f234bcdd35aeec071a6e3"
+  integrity sha512-rzSDhia6cU35UCy6y+zEEws6vSgytfHqFMSaBvUcySgzwvDO6vETyswtSNi/+aVqJw8WLMwyT1mlQQ1T/dxxOA==
 
 throat@^4.0.0:
   version "4.1.0"
