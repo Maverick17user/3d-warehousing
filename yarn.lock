@@ -3278,9 +3278,9 @@ decamelize@^1.2.0:
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 deep-equal@^1.0.1:
   version "1.1.1"
@@ -4264,6 +4264,11 @@ find-up@^3.0.0:
   integrity sha512-1yD6RmLI1XBfxugvORwlck6f75tYL+iR0jqwsOrOxMZyGYqUuDhJ0l4AXdO1iX/FTs9cBAMEk1gWSEx1kSbylg==
   dependencies:
     locate-path "^3.0.0"
+
+first-person-controls@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/first-person-controls/-/first-person-controls-1.0.1.tgz#7271023cea4a00d49cf522ae2fc74a8314329cca"
+  integrity sha512-1ys8+7pd+xPPJVe8NqNIZ/TRsVQT+gytJgHb8S/CZFr8oobJNjV2bktyddxwq9JIh9JxbzZEei8XnjSdzWCZvg==
 
 flat-cache@^2.0.1:
   version "2.0.1"
@@ -9574,6 +9579,11 @@ text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+three@^0.114.0:
+  version "0.114.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.114.0.tgz#754d08467a950ddeef06a0c645a1302b130e455a"
+  integrity sha512-3av45FxJeqYm7Rl02dfGBoqTaf2a934oUB4zMNrN8xjmASoSGeeykYoAr35+UntTdJDY/STw6CY3KuXFBWETig==
 
 throat@^4.0.0:
   version "4.1.0"
